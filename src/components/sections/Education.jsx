@@ -52,7 +52,7 @@ const Education = () => {
           field="Applied Computing"
           institution="Wilfrid Laurier University"
           duration="Sep 2025 - Present"
-          location="Waterloo, Ontario, Canada"
+          location="Waterloo, ON"
         >
           <div className="xyz-framework">
             <div className="xyz-section what-section">
@@ -67,7 +67,6 @@ const Education = () => {
                   <span className="tag">Data Analysis</span>
                   <span className="tag">Android Application Programming</span>
                   <span className="tag">Co-op Program (Upcoming)</span>
-                  <span className="tag">Applied Computing</span>
                   <span className="tag">Graduate Studies</span>
                 </div>
               </div>
@@ -128,7 +127,7 @@ const Education = () => {
                     <div className="metric-description">Prestigious Canadian university</div>
                   </div>
                 </div>
-                
+
                 <div className="key-achievements">
                   <h5>Key Achievements:</h5>
                   <ul>
@@ -150,7 +149,6 @@ const Education = () => {
               <div className="tech-item">🧮 Algorithm Design</div>
               <div className="tech-item">📊 Data Analysis</div>
               <div className="tech-item">📱 Android Programming</div>
-              <div className="tech-item">🎯 Applied Computing</div>
               <div className="tech-item">💼 Co-op Integration</div>
               <div className="tech-item">🎓 Graduate Studies</div>
             </div>
@@ -246,7 +244,7 @@ const Education = () => {
                     <div className="metric-description">Strong foundation for career</div>
                   </div>
                 </div>
-                
+
                 <div className="key-achievements">
                   <h5>Key Achievements:</h5>
                   <ul>

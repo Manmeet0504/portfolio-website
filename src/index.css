@@ -269,7 +269,7 @@ body {
 
 /* Section Styles */
 .section {
-  padding: 5rem 2rem;
+  padding: 2.5rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -293,6 +293,17 @@ body {
   height: 4px;
   background: linear-gradient(45deg, #667eea, #764ba2);
   border-radius: 2px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #6c757d;
+  font-weight: 400;
+  font-style: italic;
+  margin: 1rem auto 2rem;
+  max-width: 600px;
+  line-height: 1.6;
 }
 
 /* About Section */
@@ -369,7 +380,7 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   position: relative;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
@@ -526,7 +537,7 @@ body {
 
 /* Enhanced Experience Section with XYZ Framework */
 .experience-container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -1086,7 +1097,7 @@ body {
   }
 
   .section {
-    padding: 3rem 1rem;
+    padding: 1.5rem 1rem;
   }
 
   .experience-item {
@@ -1561,7 +1572,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  margin-top: 2rem;
+  margin: 2rem auto 0;
+  max-width: 1100px;
 }
 
 .education-item {

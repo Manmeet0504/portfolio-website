@@ -1,9 +1,9 @@
 ﻿import React from 'react';
-import { 
-  FaBriefcase, 
-  FaCode, 
-  FaGraduationCap, 
-  FaCalendarAlt, 
+import {
+  FaBriefcase,
+  FaCode,
+  FaGraduationCap,
+  FaCalendarAlt,
   FaMapMarkerAlt,
   FaRocket,
   FaCog,
@@ -111,10 +111,10 @@ const Experience = () => {
             <div className="xyz-section what-section">
               <div className="xyz-header">
                 <FaRocket className="xyz-icon" />
-                <h4>What I Do</h4>
+                <h4>What I Did</h4>
               </div>
               <div className="xyz-content">
-                <p>Develop and maintain enterprise communication solutions including CRM integrations, automation scripts, and microservices architecture for cloud-based contact center platforms serving enterprise clients.</p>
+                <p>Developed and maintained enterprise communication solutions, including CRM integrations, automation scripts, and microservices architecture for cloud-based contact center platforms serving enterprise clients.</p>
                 <div className="responsibility-tags">
                   <span className="tag">CRM Integration</span>
                   <span className="tag">API Development</span>
@@ -128,26 +128,52 @@ const Experience = () => {
             <div className="xyz-section how-section">
               <div className="xyz-header">
                 <FaTools className="xyz-icon" />
-                <h4>How I Execute</h4>
+                <h4>How I Executed</h4>
               </div>
               <div className="xyz-content">
                 <div className="tech-approach">
                   <div className="approach-item">
-                    <strong>CRM Integration (Internship):</strong>
-                    <p>Integrated Omni Toolbar with Microsoft Dynamics CRM, implementing SDK for UI events, CTD (Click to Dial), activity dumping, customer search, and chat events handling using ReactJS and JavaScript.</p>
-                  </div>
-                  <div className="approach-item">
                     <strong>Enterprise Automation:</strong>
-                    <p>Built automation scripts for DID onboarding on HDFC Sec platform, handling CSV processing, trunk registration, routing configuration, and RM mapping using Java and Python.</p>
+                    <p>
+                      Built automation scripts for seamless DID onboarding and routing on the HDFC Sec platform, enabling faster campaign configuration and efficient RM mapping across thousands of entries.
+                    </p>
                   </div>
+
                   <div className="approach-item">
                     <strong>Security & Authentication:</strong>
-                    <p>Implemented JWT encryption, BYOK (Bring Your Own Key) for interaction services, OAuth2 tokens, and prevented unauthorized token access across contexts using HashiCorp Vault.</p>
+                    <p>
+                      Strengthened platform security by implementing encryption standards, token-based authentication, and preventing unauthorized access across services.
+                    </p>
                   </div>
+
                   <div className="approach-item">
-                    <strong>API & Database Optimization:</strong>
-                    <p>Developed CallRouting APIs, custom stats APIs with MongoDB-like syntax to SQL conversion, live monitoring APIs, and optimized PostgreSQL queries with pagination and caching.</p>
+                    <strong>API Optimization:</strong>
+                    <p>
+                      Enhanced the efficiency of internal APIs for call routing, live monitoring, and custom analytics, improving response times and reducing redundant data handling.
+                    </p>
                   </div>
+
+                  <div className="approach-item">
+                    <strong>Progressive Web Apps (PWA):</strong>
+                    <p>
+                      Explored the fundamentals of PWAs and built an installable prototype to understand caching, offline access, and web app manifests.
+                    </p>
+                  </div>
+
+                  <div className="approach-item">
+                    <strong>Reliability & Ownership:</strong>
+                    <p>
+                      Took ownership of high-priority customer issues as a DRI, resolving critical bugs, optimizing backend flows, and presenting solutions to stakeholders through live demos.
+                    </p>
+                  </div>
+
+                  <div className="approach-item">
+                    <strong>Learning & Growth:</strong>
+                    <p>
+                      Gained hands-on experience in backend architecture, automation workflows, API design, and cloud deployment practices, while improving overall problem-solving and debugging skills.
+                    </p>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -184,15 +210,20 @@ const Experience = () => {
                 <div className="key-achievements">
                   <h5>Key Achievements:</h5>
                   <ul>
-                    <li>🔗 Successfully integrated Microsoft Dynamics CRM with Omni Toolbar for enterprise contact centers</li>
-                    <li>🤖 Automated DID onboarding process for HDFC Sec, reducing manual effort significantly</li>
-                    <li>🔐 Implemented comprehensive JWT encryption and BYOK security across multiple services</li>
-                    <li>📊 Built generic custom stats API with MongoDB-like syntax supporting any table structure</li>
-                    <li>🎯 Served as DRI (Directly Responsible Individual) handling 24/7 customer priority tickets</li>
-                    <li>⚡ Optimized CallRouting APIs eliminating redundant data requirements for updates</li>
-                    <li>📱 Learned and implemented Progressive Web Apps (PWA) for enhanced user experience</li>
+                    <li>🤖 Automated DID onboarding, routing, and RM mapping for HDFC Sec, cutting down onboarding time significantly</li>
+                    <li>🔐 Strengthened service security through encrypted tokens, BYOK integration, and refined authentication flows</li>
+                    <li>⚙️ Designed scalable APIs for call routing, live monitoring, and analytics, ensuring faster and more reliable responses</li>
+                    <li>📊 Created a versatile stats API supporting dynamic query structures for flexible data reporting</li>
+                    <li>🚀 Enhanced backend efficiency with optimized database queries, caching strategies, and pagination logic</li>
+                    <li>🎯 Acted as DRI, resolving production-critical customer issues and ensuring uninterrupted service delivery</li>
+                    <li>🪲 Addressed complex bugs across backend and UI layers, improving system stability and user experience</li>
+                    <li>💬 Demonstrated key features and automation workflows to stakeholders, driving alignment and visibility</li>
+                    <li>📱 Built and experimented with Progressive Web Apps (PWA) to explore modern web capabilities</li>
+                    <li>💡 Gained deep exposure to distributed systems, automation workflows, and secure API communication</li>
                   </ul>
                 </div>
+
+
               </div>
             </div>
           </div>
