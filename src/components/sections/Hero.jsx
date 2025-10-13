@@ -20,7 +20,7 @@ const Hero = () => {
       <div className="hero-content">
         <h1 className="hero-title">Manmeet Singh</h1>
         <div className="hero-subtitle">
-          <span className="typing-text">Full Stack Developer & Data Scientist</span>
+          <span className="typing-text">Full Stack Developer & Emerging Data Scientist</span>
         </div>
         <p className="hero-description">
           Passionate about creating innovative solutions that bridge the gap between technology and real-world problems.
@@ -49,12 +49,12 @@ const Hero = () => {
           </a>
         </div>
 
-        <a 
-          href="#about" 
-          onClick={(e) => { 
-            e.preventDefault(); 
-            scrollToSection('about'); 
-          }} 
+        <a
+          href="#about"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection('about');
+          }}
           className="cta-button"
         >
           Explore My Work
