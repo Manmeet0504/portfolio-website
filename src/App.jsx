@@ -10,11 +10,15 @@ import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Experience from './components/sections/Experience';
 import Education from './components/sections/Education';
-import ComingSoon from './components/sections/ComingSoon';
+import Projects from './components/sections/Projects';
+import Skills from './components/sections/Skills';
+import Contact from './components/sections/Contact';
 
 function App() {
   const { activeSection, showScrollTop } = useScrollEffects();
   const { isVisible } = useIntersectionObserver();
+
+  console.log('App rendering...', { activeSection, showScrollTop });
 
   return (
     <div>
@@ -23,7 +27,9 @@ function App() {
       <About />
       <Experience />
       <Education />
-      <ComingSoon sections={['Projects', 'Skills', 'Contact']} />
+      <Projects />
+      <Skills />
+      <Contact />
       <ScrollToTop showScrollTop={showScrollTop} />
     </div>
   );
