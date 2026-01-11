@@ -44,7 +44,7 @@ const Hero = () => {
           <a href="https://github.com/manmeet0504" target="_blank" rel="noopener" className="social-link">
             <FaGithub />
           </a>
-          <a href="https://leetcode.com/manmeet0504/" target="_blank" rel="noopener" className="social-link">
+          <a href="https://leetcode.com/u/Manmeet_007/" target="_blank" rel="noopener" className="social-link">
             <FaCode />
           </a>
         </div>
