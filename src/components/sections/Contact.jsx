@@ -17,7 +17,7 @@ const Contact = () => {
       icon: <FaLinkedin />,
       title: 'LinkedIn',
       value: 'Connect on LinkedIn',
-      link: 'https://www.linkedin.com/in/manmeet-singh-0504/'
+      link: 'https://www.linkedin.com/in/manmeet-singh-a8681b204/'
     },
     {
       icon: <FaGithub />,

@@ -38,7 +38,7 @@ const Hero = () => {
         </div>
 
         <div className="social-links">
-          <a href="https://www.linkedin.com/in/manmeet-singh-0504/" target="_blank" rel="noopener" className="social-link">
+          <a href="https://www.linkedin.com/in/manmeet-singh-a8681b204/" target="_blank" rel="noopener" className="social-link">
             <FaLinkedin />
           </a>
           <a href="https://github.com/manmeet0504" target="_blank" rel="noopener" className="social-link">
