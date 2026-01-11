@@ -5,7 +5,6 @@ import {
   FaGraduationCap,
   FaProjectDiagram,
   FaCogs,
-  FaHeart,
   FaEnvelope,
   FaMapMarkerAlt
 } from 'react-icons/fa';
@@ -19,7 +18,6 @@ const Navigation = ({ activeSection }) => {
     { id: 'education', label: 'Education', icon: FaGraduationCap },
     { id: 'projects', label: 'Projects', icon: FaProjectDiagram },
     { id: 'skills', label: 'Skills', icon: FaCogs },
-    { id: 'extracurricular', label: 'Activities', icon: FaHeart },
     { id: 'contact', label: 'Contact', icon: FaEnvelope }
   ];
 

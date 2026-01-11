@@ -6,6 +6,7 @@ import { useScrollEffects, useIntersectionObserver } from './hooks/useScrollEffe
 // Import components
 import Navigation from './components/common/Navigation';
 import ScrollToTop from './components/common/ScrollToTop';
+import ScrollProgress from './components/common/ScrollProgress';
 import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Experience from './components/sections/Experience';
@@ -18,11 +19,10 @@ function App() {
   const { activeSection, showScrollTop } = useScrollEffects();
   const { isVisible } = useIntersectionObserver();
 
-  console.log('App rendering...', { activeSection, showScrollTop });
-
   return (
     <div>
       <Navigation activeSection={activeSection} />
+      <ScrollProgress />
       <Hero />
       <About />
       <Experience />

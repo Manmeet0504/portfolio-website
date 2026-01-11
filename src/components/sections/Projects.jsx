@@ -59,6 +59,14 @@ const Projects = () => {
                   <FaCalendarAlt />
                   Sept 2025 - Dec 2025
                 </div>
+                <a 
+                  href="https://drive.google.com/file/d/1tHRllKTm7k0Ls3zdUt1d1hlyeeQKWHEm/view" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="project-link-btn"
+                >
+                  <FaGlobe /> View Demo
+                </a>
               </div>
             </div>
 
@@ -210,6 +218,14 @@ const Projects = () => {
                   <FaCalendarAlt />
                   Jan 2023 - Dec 2023
                 </div>
+                <a 
+                  href="https://manmeet0504ripentrack.netlify.app/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="project-link-btn"
+                >
+                  <FaGlobe /> View Website
+                </a>
               </div>
             </div>
 
@@ -360,6 +376,14 @@ const Projects = () => {
                   <FaCalendarAlt />
                   Feb 2023 - Apr 2023
                 </div>
+                <a 
+                  href="https://treasure-hunt0504.web.app/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="project-link-btn"
+                >
+                  <FaGlobe /> View Website
+                </a>
               </div>
             </div>
 
@@ -481,6 +505,163 @@ const Projects = () => {
                       <li>Developed strong foundation in vanilla JavaScript and DOM manipulation for interactive web applications</li>
                       <li>Learned responsive design principles and CSS animation techniques for enhanced user engagement</li>
                       <li>Gained experience in Node.js backend development and session management architecture</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Project 4: Sorting Visualizer */}
+          <div className="project-item xyz-impact" id="sorting-visualizer-project">
+            <div className="project-header">
+              <div className="project-icon-wrapper">
+                <FaChartLine className="project-icon" />
+              </div>
+              <div className="project-info">
+                <h3 className="project-title">Sorting Visualizer</h3>
+                <div className="project-subtitle">Interactive Algorithm Visualization Tool</div>
+                <div className="project-duration">
+                  <FaCalendarAlt />
+                  Educational Project
+                </div>
+                <a 
+                  href="https://64c95733ba4c93249a511871--meek-douhua-fbde11.netlify.app/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="project-link-btn"
+                >
+                  <FaGlobe /> View Website
+                </a>
+              </div>
+            </div>
+
+            <div className="project-overview">
+              <p>
+                An interactive web-based visualization tool that demonstrates how various sorting algorithms work in real-time. The application provides animated step-by-step visual representations of sorting processes, making it easier to understand algorithm complexities and performance differences.
+              </p>
+            </div>
+
+            <div className="xyz-framework">
+              <div className="xyz-section what-section">
+                <div className="xyz-header">
+                  <FaRocket className="xyz-icon" />
+                  <h4>What I Built</h4>
+                </div>
+                <div className="xyz-content">
+                  <p>Developed an interactive sorting algorithm visualizer with real-time animations, customizable array sizes, speed controls, and support for multiple sorting algorithms including Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort, and Heap Sort.</p>
+                  <div className="responsibility-tags">
+                    <span className="tag">Algorithm Visualization</span>
+                    <span className="tag">Web Development</span>
+                    <span className="tag">Animation Logic</span>
+                    <span className="tag">UI/UX Design</span>
+                    <span className="tag">Educational Tool</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="xyz-section how-section">
+                <div className="xyz-header">
+                  <FaTools className="xyz-icon" />
+                  <h4>How I Executed</h4>
+                </div>
+                <div className="xyz-content">
+                  <div className="tech-approach">
+                    <div className="approach-item">
+                      <strong>Algorithm Implementation:</strong>
+                      <p>
+                        Implemented multiple sorting algorithms (Bubble, Selection, Insertion, Merge, Quick, Heap Sort) with step-by-step visualization, using color-coded bars to represent array elements and highlight comparisons, swaps, and sorted sections.
+                      </p>
+                    </div>
+
+                    <div className="approach-item">
+                      <strong>Interactive Controls:</strong>
+                      <p>
+                        Built user-friendly controls for adjusting array size, animation speed, and algorithm selection, with options to generate new random arrays and pause/resume animations for detailed observation.
+                      </p>
+                    </div>
+
+                    <div className="approach-item">
+                      <strong>Visual Representation:</strong>
+                      <p>
+                        Designed dynamic bar chart visualization using JavaScript and HTML5 Canvas/CSS, with smooth animations to illustrate each step of the sorting process and color transitions to indicate element states.
+                      </p>
+                    </div>
+
+                    <div className="approach-item">
+                      <strong>Performance Metrics:</strong>
+                      <p>
+                        Integrated comparison counters and time complexity displays to help users understand algorithmic efficiency and performance characteristics of different sorting methods.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="tech-stack">
+                    <h5>Technology Stack</h5>
+                    <div className="tech-categories">
+                      <div className="tech-category">
+                        <span className="category-label">Core Technologies:</span>
+                        <div className="tech-items">
+                          <div className="tech-item"><SiJavascript /> JavaScript</div>
+                          <div className="tech-item"><SiHtml5 /> HTML5</div>
+                          <div className="tech-item"><SiCss3 /> CSS3</div>
+                        </div>
+                      </div>
+                      <div className="tech-category">
+                        <span className="category-label">Features:</span>
+                        <div className="tech-items">
+                          <div className="tech-item"><FaChartLine /> Data Visualization</div>
+                          <div className="tech-item"><FaCode /> Algorithm Logic</div>
+                          <div className="tech-item"><FaCog /> Interactive UI</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="xyz-section impact-section">
+                <div className="xyz-header">
+                  <FaChartLine className="xyz-icon" />
+                  <h4>Impact & Results</h4>
+                </div>
+                <div className="xyz-content">
+                  <div className="impact-metrics">
+                    <div className="metric-item">
+                      <div className="metric-number">6+</div>
+                      <div className="metric-label">Algorithms</div>
+                      <div className="metric-description">Sorting methods visualized</div>
+                    </div>
+                    <div className="metric-item">
+                      <div className="metric-number">Real-time</div>
+                      <div className="metric-label">Animation</div>
+                      <div className="metric-description">Step-by-step visualization</div>
+                    </div>
+                    <div className="metric-item">
+                      <div className="metric-number">Custom</div>
+                      <div className="metric-label">Controls</div>
+                      <div className="metric-description">Speed & size adjustments</div>
+                    </div>
+                  </div>
+
+                  <div className="achievements">
+                    <div className="achievement">
+                      <span>Created educational tool that visually demonstrates sorting algorithm mechanics, making complex concepts accessible through interactive animations</span>
+                    </div>
+                    <div className="achievement">
+                      <span>Implemented multiple sorting algorithms with color-coded visualizations to highlight comparisons, swaps, and sorted sections</span>
+                    </div>
+                    <div className="achievement">
+                      <span>Designed intuitive interface with customizable parameters for array generation, animation speed, and algorithm selection</span>
+                    </div>
+                  </div>
+
+                  <div className="key-learnings">
+                    <h5>Key Learnings</h5>
+                    <ul>
+                      <li>Deepened understanding of sorting algorithm complexities and performance characteristics</li>
+                      <li>Mastered JavaScript animation techniques and asynchronous programming for smooth visualizations</li>
+                      <li>Gained experience in creating educational tools that simplify complex computer science concepts</li>
                     </ul>
                   </div>
                 </div>
