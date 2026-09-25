@@ -7,6 +7,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Keeps anchored sections clear of the fixed navbar */
+  scroll-padding-top: 90px;
 }
 
 body {
@@ -52,11 +54,12 @@ body::before {
 }
 
 .nav-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem;
   padding: 0 2rem;
 }
 
@@ -71,19 +74,29 @@ body::before {
 .nav-menu {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  row-gap: 0.25rem;
+  column-gap: clamp(0.25rem, 1.1vw, 1.5rem);
+  min-width: 0;
+}
+
+.nav-toggle {
+  display: none;
 }
 
 .nav-link {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem clamp(0.5rem, 0.8vw, 1rem);
   border-radius: 8px;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  white-space: nowrap;
 }
 
 .nav-link:hover,
@@ -188,7 +201,11 @@ body::before {
 
 .hero-subtitle {
   font-size: clamp(1.2rem, 4vw, 2rem);
-  margin-bottom: 2rem;
+  /* Shrink-wrap the text so the typing cursor lands right after the last
+     letter rather than at the far edge of the hero. */
+  width: max-content;
+  max-width: 100%;
+  margin: 0 auto 2rem;
   opacity: 0.9;
 }
 
@@ -323,6 +340,11 @@ body::before {
 }
 
 .section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
   text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
@@ -816,12 +838,15 @@ body::before {
 .metric-number {
   font-size: 2.5rem;
   font-weight: 900;
+  line-height: 1.2;
   color: #06b6d4;
   margin-bottom: 0.5rem;
   background: linear-gradient(135deg, #06b6d4, #3b82f6);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  /* Last resort so a long value never spills outside the card */
+  overflow-wrap: break-word;
 }
 
 .metric-label {
@@ -835,6 +860,14 @@ body::before {
   font-size: 0.85rem;
   color: #666;
   line-height: 1.5;
+}
+
+/* Metric cards sit near their 200px minimum in this band, so word values
+   like "Multiple" or "Real-time" need a smaller number to stay inside. */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .metric-number {
+    font-size: 1.9rem;
+  }
 }
 
 /* Achievements in Projects */
@@ -1270,10 +1303,6 @@ body::before {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-  }
-
   .about-content {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -1522,8 +1551,9 @@ body::before {
 }
 
 .section-icon {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   color: #06b6d4;
+  flex-shrink: 0;
 }
 
 .modal-section-header h4 {
@@ -1977,9 +2007,32 @@ body::before {
 }
 
 /* Responsive Navigation */
-@media (max-width: 768px) {
+@media (min-width: 1024px) and (max-width: 1200px) {
   .nav-container {
     padding: 0 1rem;
+    gap: 1rem;
+  }
+
+  .nav-logo {
+    font-size: 1.25rem;
+  }
+
+  .nav-menu {
+    column-gap: 0.5rem;
+  }
+
+  .nav-link {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.85rem;
+    gap: 0.35rem;
+  }
+}
+
+/* Full label row cannot fit below this width, so collapse to a dropdown */
+@media (max-width: 1023px) {
+  .nav-container {
+    padding: 0 1rem;
+    gap: 1rem;
   }
 
   .nav-logo {
@@ -1990,37 +2043,226 @@ body::before {
     max-width: 150px;
   }
 
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    font-size: 1.25rem;
+    color: white;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .nav-toggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  /* Collapses the menu into a dropdown panel below the navbar */
   .nav-menu {
-    gap: 1rem;
-    flex-wrap: wrap;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0.25rem;
+    padding: 0.75rem 1rem 1rem;
+    background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    max-height: calc(100vh - 100%);
+    overflow-y: auto;
+  }
+
+  .nav-menu:not(.open) {
+    display: none;
   }
 
   .nav-link {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
+    padding: 0.7rem 0.9rem;
+    font-size: 0.95rem;
   }
 
-  .nav-link span {
-    display: none;
+  .nav-link:hover,
+  .nav-link.active {
+    transform: none;
   }
 }
 
 @media (max-width: 480px) {
   .nav-container {
-    padding: 0 0.5rem;
+    padding: 0 0.75rem;
   }
 
   .nav-logo {
     font-size: 1rem;
     max-width: 120px;
   }
+}
 
-  .nav-menu {
-    gap: 0.5rem;
+/* Certifications Section Styles */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.certification-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border-top: 4px solid #06b6d4;
+  border-left: 6px solid #06b6d4;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  gap: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(6, 182, 212, 0.2), 0 0 40px rgba(59, 130, 246, 0.1);
+}
+
+.certification-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.certification-icon-wrapper {
+  width: 68px;
+  height: 68px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.35);
+}
+
+.certification-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.certification-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #2c3e50;
+  line-height: 1.3;
+  margin-bottom: 0.4rem;
+}
+
+.certification-issuer {
+  color: #3b82f6;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.certification-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+.certification-date,
+.certification-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.certification-status {
+  color: #059669;
+  font-weight: 600;
+}
+
+.certification-summary {
+  color: #666;
+  line-height: 1.7;
+  font-size: 0.98rem;
+}
+
+.certification-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.certification-skills .tag {
+  background: linear-gradient(135deg, #06b6d4, #3b82f6);
+  color: white;
+  padding: 0.4rem 0.9rem;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.certification-link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 0.7rem 1.3rem;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.certification-link-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.45);
+}
+
+/* Shown until a credential URL is filled in */
+.certification-link-btn.placeholder {
+  background: #f1f3f5;
+  color: #868e96;
+  border: 1px dashed #ced4da;
+  box-shadow: none;
+  cursor: default;
+}
+
+.certification-link-btn.placeholder:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+@media (max-width: 480px) {
+  .certification-card {
+    padding: 1.5rem;
   }
 
-  .nav-link {
-    padding: 0.3rem 0.5rem;
+  .certification-header {
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 
@@ -2515,6 +2757,12 @@ body::before {
   border-top: 4px solid #06b6d4;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  cursor: pointer;
 }
 
 .contact-card::before {

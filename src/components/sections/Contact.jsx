@@ -6,12 +6,16 @@ import {
 } from 'react-icons/fa';
 
 const Contact = () => {
+  const handleEmailClick = () => {
+    window.location = 'mailto:manmeet0504@gmail.com';
+  };
+
   const contactInfo = [
     {
       icon: <FaEnvelope />,
       title: 'Email',
       value: 'manmeet0504@gmail.com',
-      link: 'mailto:manmeet0504@gmail.com'
+      isEmail: true
     },
     {
       icon: <FaLinkedin />,
@@ -40,30 +44,35 @@ const Contact = () => {
 
         <div className="contact-cards-grid">
           {contactInfo.map((info, idx) => (
-            <div key={idx} className="contact-card">
-              {info.link ? (
-                <a 
-                  href={info.link} 
-                  className="contact-card-link"
-                  target={info.link.startsWith('http') ? '_blank' : undefined}
-                  rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                >
-                  <div className="contact-card-icon">{info.icon}</div>
-                  <div className="contact-card-content">
-                    <div className="contact-card-title">{info.title}</div>
-                    <div className="contact-card-value">{info.value}</div>
-                  </div>
-                </a>
-              ) : (
-                <div className="contact-card-content-wrapper">
-                  <div className="contact-card-icon">{info.icon}</div>
-                  <div className="contact-card-content">
-                    <div className="contact-card-title">{info.title}</div>
-                    <div className="contact-card-value">{info.value}</div>
-                  </div>
+            info.isEmail ? (
+              <div 
+                key={idx}
+                className="contact-card"
+                onClick={handleEmailClick}
+                style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}
+              >
+                <div className="contact-card-icon">{info.icon}</div>
+                <div className="contact-card-content">
+                  <div className="contact-card-title">{info.title}</div>
+                  <div className="contact-card-value">{info.value}</div>
                 </div>
-              )}
-            </div>
+              </div>
+            ) : (
+              <a 
+                key={idx}
+                href={info.link} 
+                className="contact-card"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: 'none', color: 'inherit' }}
+              >
+                <div className="contact-card-icon">{info.icon}</div>
+                <div className="contact-card-content">
+                  <div className="contact-card-title">{info.title}</div>
+                  <div className="contact-card-value">{info.value}</div>
+                </div>
+              </a>
+            )
           ))}
         </div>
       </div>

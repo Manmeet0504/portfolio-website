@@ -11,7 +11,7 @@ const ScrollProgress = () => {
       setScrollProgress(progress);
 
       // Determine current section
-      const sections = ['home', 'about', 'experience', 'education', 'projects', 'skills', 'contact'];
+      const sections = ['home', 'about', 'experience', 'education', 'certifications', 'projects', 'skills', 'contact'];
       let current = 'home';
       
       sections.forEach(section => {
@@ -38,6 +38,7 @@ const ScrollProgress = () => {
     about: 'About Me',
     experience: 'Experience',
     education: 'Education',
+    certifications: 'Certifications',
     projects: 'Projects',
     skills: 'Skills',
     contact: 'Contact'

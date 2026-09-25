@@ -5,6 +5,7 @@ import {
   FaCloud,
   FaTools,
   FaBrain,
+  FaRobot,
   FaTrophy,
   FaBook
 } from 'react-icons/fa';
@@ -22,6 +23,10 @@ import {
   SiPostgresql,
   SiMongodb,
   SiAmazonwebservices,
+  SiAwslambda,
+  SiAmazonapigateway,
+  SiAmazons3,
+  SiAmazonec2,
   SiDocker,
   SiKubernetes,
   SiJenkins,
@@ -29,7 +34,7 @@ import {
   SiSwagger,
   SiJira,
   SiConfluence,
-  SiGithub
+  SiGithubcopilot
 } from 'react-icons/si';
 
 const Skills = () => {
@@ -70,7 +75,11 @@ const Skills = () => {
       category: 'Cloud & DevOps',
       icon: <FaCloud />,
       skills: [
-        { name: 'AWS (S3, EC2)', icon: <SiAmazonwebservices /> },
+        { name: 'AWS Lambda', icon: <SiAwslambda /> },
+        { name: 'API Gateway', icon: <SiAmazonapigateway /> },
+        { name: 'Amazon S3', icon: <SiAmazons3 /> },
+        { name: 'Amazon EC2', icon: <SiAmazonec2 /> },
+        { name: 'AWS SageMaker', icon: <SiAmazonwebservices /> },
         { name: 'Docker', icon: <SiDocker /> },
         { name: 'Kubernetes', icon: <SiKubernetes /> },
         { name: 'RedHat OpenShift', icon: <FaCloud /> },
@@ -91,13 +100,17 @@ const Skills = () => {
       ]
     },
     {
-      category: 'AI & Productivity',
+      category: 'GenAI & Productivity',
       icon: <FaBrain />,
       skills: [
-        { name: 'GitHub Copilot', icon: <SiGithub /> },
-        { name: 'Claude', icon: <FaBrain /> },
+        { name: 'Amazon Bedrock', icon: <FaBrain /> },
+        { name: 'Amazon Q', icon: <FaRobot /> },
+        { name: 'GenAI Agents', icon: <FaRobot /> },
         { name: 'Prompt Engineering', icon: <FaBrain /> },
-        { name: 'Agent-to-Agent Protocols', icon: <FaBrain /> }
+        { name: 'Agent-to-Agent Protocols', icon: <FaBrain /> },
+        { name: 'GitHub Copilot', icon: <SiGithubcopilot /> },
+        { name: 'Microsoft Copilot', icon: <FaBrain /> },
+        { name: 'Claude', icon: <FaBrain /> }
       ]
     }
   ];

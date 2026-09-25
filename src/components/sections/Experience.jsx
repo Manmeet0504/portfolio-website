@@ -15,9 +15,23 @@ import {
   FaJs,
   FaCss3Alt,
   FaHtml5,
-  FaProjectDiagram
+  FaProjectDiagram,
+  FaAws,
+  FaRobot,
+  FaBrain,
+  FaCloud,
+  FaShieldAlt
 } from 'react-icons/fa';
-import { SiTypescript, SiRedux, SiPostgresql, SiTailwindcss } from 'react-icons/si';
+import {
+  SiTypescript,
+  SiRedux,
+  SiPostgresql,
+  SiTailwindcss,
+  SiAwslambda,
+  SiAmazonapigateway,
+  SiAmazons3,
+  SiGithubcopilot
+} from 'react-icons/si';
 import { scrollToSection } from '../../hooks/scrollUtils';
 
 const ExperienceRoadmap = () => {
@@ -41,8 +55,19 @@ const ExperienceRoadmap = () => {
   return (
     <div className="career-roadmap">
       <div className="roadmap-timeline">
-        <div className="roadmap-item" onClick={() => scrollToExperience('exotel-mts')}>
+        <div className="roadmap-item" onClick={() => scrollToExperience('sunlife-swe')}>
           <div className="roadmap-node current">
+            <FaCloud className="roadmap-icon" />
+          </div>
+          <div className="roadmap-content">
+            <div className="roadmap-period">May 2026 - Present</div>
+            <div className="roadmap-title">Software Engineer (Student)</div>
+            <div className="roadmap-company">Sun Life Assurance</div>
+          </div>
+        </div>
+
+        <div className="roadmap-item" onClick={() => scrollToExperience('exotel-mts')}>
+          <div className="roadmap-node">
             <FaBriefcase className="roadmap-icon" />
           </div>
           <div className="roadmap-content">
@@ -88,7 +113,163 @@ const Experience = () => {
       <ExperienceRoadmap />
 
       <div className="experience-container">
-        {/* Current Role - Member of Technical Staff */}
+        {/* Current Role - Software Engineer (Student) */}
+        <div className="experience-item xyz-impact" id="sunlife-swe">
+          <div className="experience-header">
+            <div className="experience-title-group">
+              <h3 className="experience-title">Software Engineer (Student)</h3>
+              <div className="company-info">
+                <span className="company-name">Sun Life Assurance Company of Canada</span>
+                <span className="experience-duration">
+                  <FaCalendarAlt className="duration-icon" />
+                  May 2026 - Present
+                </span>
+              </div>
+            </div>
+            <div className="experience-location">
+              <FaMapMarkerAlt />
+              Toronto, ON
+            </div>
+          </div>
+
+          <div className="xyz-framework">
+            <div className="xyz-section what-section">
+              <div className="xyz-header">
+                <FaRocket className="xyz-icon" />
+                <h4>What I Do</h4>
+              </div>
+              <div className="xyz-content">
+                <p>Building serverless, AI-assisted workflows on AWS for internal engineering and business teams, connecting cloud services, enterprise knowledge sources, and large language models into GenAI solutions that cut down manual review effort and speed up day-to-day development.</p>
+                <div className="responsibility-tags">
+                  <span className="tag">Serverless Architecture</span>
+                  <span className="tag">GenAI Agents</span>
+                  <span className="tag">REST API Development</span>
+                  <span className="tag">LLM Integration</span>
+                  <span className="tag">AI-Assisted Development</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="xyz-section how-section">
+              <div className="xyz-header">
+                <FaTools className="xyz-icon" />
+                <h4>How I Execute</h4>
+              </div>
+              <div className="xyz-content">
+                <div className="tech-approach">
+                  <div className="approach-item">
+                    <strong>Serverless Applications:</strong>
+                    <p>
+                      Designing and deploying event-driven services on AWS Lambda behind API Gateway, wiring them to cloud storage and downstream APIs so workflows scale on demand without dedicated infrastructure.
+                    </p>
+                  </div>
+
+                  <div className="approach-item">
+                    <strong>Agentic AI Development:</strong>
+                    <p>
+                      Gaining hands-on experience building conversational GenAI agents on Amazon Q, defining agent instructions, wiring custom actions to serverless endpoints, and iterating on prompt design so the agent reliably picks the right tool for a request.
+                    </p>
+                  </div>
+
+                  <div className="approach-item">
+                    <strong>Enterprise Knowledge Integration:</strong>
+                    <p>
+                      Connecting assistants to curated enterprise knowledge sources and cloud storage so responses stay grounded in approved internal documentation rather than model recall alone.
+                    </p>
+                  </div>
+
+                  <div className="approach-item">
+                    <strong>Full Stack Delivery:</strong>
+                    <p>
+                      Building the frontend layer that sits on top of these workflows, handling authenticated API calls, streaming responses, and presenting AI output in a form reviewers can act on quickly.
+                    </p>
+                  </div>
+
+                  <div className="approach-item">
+                    <strong>AI-Assisted Engineering:</strong>
+                    <p>
+                      Using GitHub Copilot and Microsoft Copilot as part of the everyday workflow for scaffolding, refactoring, and test generation, while reviewing generated output against team standards before it ships.
+                    </p>
+                  </div>
+
+                  <div className="approach-item">
+                    <strong>Secure & Production Ready:</strong>
+                    <p>
+                      Working within enterprise guardrails such as scoped IAM permissions, secure handling of internal data, code reviews, and staged deployments, so GenAI features reach production safely.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="xyz-section impact-section">
+              <div className="xyz-header">
+                <FaChartLine className="xyz-icon" />
+                <h4>Impact & Learning</h4>
+              </div>
+              <div className="xyz-content">
+                <div className="impact-metrics">
+                  <div className="metric-item">
+                    <div className="metric-number">GenAI</div>
+                    <div className="metric-label">Agents Built</div>
+                    <div className="metric-description">Assistants with custom actions and enterprise knowledge sources</div>
+                  </div>
+                  <div className="metric-item">
+                    <div className="metric-number">AWS</div>
+                    <div className="metric-label">Serverless Stack</div>
+                    <div className="metric-description">Lambda, API Gateway, and cloud storage driven workflows</div>
+                  </div>
+                  <div className="metric-item">
+                    <div className="metric-number">Multiple</div>
+                    <div className="metric-label">Internal Teams</div>
+                    <div className="metric-description">Workflows adopted by business stakeholders across teams</div>
+                  </div>
+                  <div className="metric-item">
+                    <div className="metric-number">Less</div>
+                    <div className="metric-label">Manual Effort</div>
+                    <div className="metric-description">Automated review steps previously handled by hand</div>
+                  </div>
+                </div>
+
+                <div className="key-achievements">
+                  <h5>Key Highlights:</h5>
+                  <ul>
+                    <li>☁️ Engineered serverless applications on AWS Lambda with REST APIs powering AI-assisted internal workflows</li>
+                    <li>🤖 Built and refined GenAI agents on Amazon Q, wiring custom actions to serverless endpoints for real task automation</li>
+                    <li>📚 Integrated enterprise knowledge sources so assistant responses stay grounded in approved internal documentation</li>
+                    <li>🧠 Gained practical experience in agent design, covering instructions, tool selection, and prompt iteration for reliable behaviour</li>
+                    <li>⚡ Reduced manual review effort for internal teams by automating steps that previously required hands-on triage</li>
+                    <li>🛠️ Adopted GitHub Copilot and Microsoft Copilot into daily development to accelerate delivery without compromising review standards</li>
+                    <li>🔐 Delivered within enterprise security guardrails using scoped IAM roles, code reviews, and staged deployments</li>
+                    <li>🤝 Presented working GenAI solutions to business stakeholders, turning prototypes into production-ready features</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="tech-stack">
+            <h4>Technologies & Tools Used:</h4>
+            <div className="tech-icons">
+              <div className="tech-item"><SiAwslambda /> AWS Lambda</div>
+              <div className="tech-item"><SiAmazonapigateway /> API Gateway</div>
+              <div className="tech-item"><SiAmazons3 /> Amazon S3</div>
+              <div className="tech-item"><FaBrain /> Amazon Bedrock</div>
+              <div className="tech-item"><FaRobot /> Amazon Q</div>
+              <div className="tech-item"><FaAws /> AWS SageMaker</div>
+              <div className="tech-item"><FaPython /> Python</div>
+              <div className="tech-item"><FaReact /> ReactJS</div>
+              <div className="tech-item"><FaJs /> JavaScript</div>
+              <div className="tech-item"><SiGithubcopilot /> GitHub Copilot</div>
+              <div className="tech-item"><FaShieldAlt /> IAM & Guardrails</div>
+            </div>
+            <div className="additional-tools">
+              <p><strong>Additional Tools:</strong> Microsoft Copilot, Claude AI, Git, GitHub, Postman, Swagger, Jira, Confluence</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Previous Role - Member of Technical Staff */}
         <div className="experience-item xyz-impact" id="exotel-mts">
           <div className="experience-header">
             <div className="experience-title-group">

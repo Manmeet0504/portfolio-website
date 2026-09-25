@@ -61,12 +61,12 @@ const Education = () => {
                 <h4>What I Study</h4>
               </div>
               <div className="xyz-content">
-                <p>Currently in first term of Masters of Applied Computing program with integrated Co-op opportunities. Focusing on practical algorithm design, data analysis, and mobile application development while preparing for future co-op placements in the industry.</p>
+                <p>Currently in the fourth term of the Masters of Applied Computing program, which is the co-op work term. Building on graduate coursework in practical algorithm design, data analysis, and mobile application development by applying it to production engineering work in industry.</p>
                 <div className="subject-tags">
+                  <span className="tag">Co-op Work Term (Current)</span>
                   <span className="tag">Practical Algorithm Design</span>
                   <span className="tag">Data Analysis</span>
                   <span className="tag">Android Application Programming</span>
-                  <span className="tag">Co-op Program (Upcoming)</span>
                   <span className="tag">Graduate Studies</span>
                 </div>
               </div>
@@ -80,20 +80,20 @@ const Education = () => {
               <div className="xyz-content">
                 <div className="tech-approach">
                   <div className="approach-item">
-                    <strong>First Term Focus:</strong>
-                    <p>Currently engaged in foundational graduate coursework including Practical Algorithm Design, Data Analysis, and Android Application Programming, building essential skills for advanced computing applications.</p>
+                    <strong>Co-op Work Term:</strong>
+                    <p>Currently in the fourth term of the program, which is the co-op work term, applying graduate coursework to production engineering work in a corporate environment.</p>
+                  </div>
+                  <div className="approach-item">
+                    <strong>Graduate Coursework:</strong>
+                    <p>Completed core graduate coursework including Practical Algorithm Design, Data Analysis, and Android Application Programming, building essential skills for advanced computing applications.</p>
                   </div>
                   <div className="approach-item">
                     <strong>Hands-On Learning:</strong>
-                    <p>Applying theoretical concepts through practical programming assignments and projects, gaining experience with algorithm implementation, data analysis techniques, and mobile app development.</p>
-                  </div>
-                  <div className="approach-item">
-                    <strong>Co-op Preparation:</strong>
-                    <p>Preparing for upcoming co-op placements as part of the integrated program structure, which will provide real-world industry experience alongside academic learning.</p>
+                    <p>Applied theoretical concepts through practical programming assignments and projects, gaining experience with algorithm implementation, data analysis techniques, and mobile app development.</p>
                   </div>
                   <div className="approach-item">
                     <strong>Graduate-Level Transition:</strong>
-                    <p>Successfully transitioning from undergraduate studies to graduate-level coursework, adapting to advanced academic rigor while building on strong engineering foundation.</p>
+                    <p>Successfully transitioned from undergraduate studies to graduate-level coursework, adapting to advanced academic rigor while building on a strong engineering foundation.</p>
                   </div>
                 </div>
               </div>
@@ -107,19 +107,19 @@ const Education = () => {
               <div className="xyz-content">
                 <div className="impact-metrics">
                   <div className="metric-item">
-                    <div className="metric-number">1st</div>
+                    <div className="metric-number">4th</div>
                     <div className="metric-label">Term Status</div>
-                    <div className="metric-description">Currently in first term</div>
+                    <div className="metric-description">Currently in fourth term</div>
                   </div>
                   <div className="metric-item">
-                    <div className="metric-number">3</div>
+                    <div className="metric-number">6</div>
                     <div className="metric-label">Core Courses</div>
-                    <div className="metric-description">Algorithm Design, Data Analysis, Android Programming</div>
+                    <div className="metric-description">Completed across the program</div>
                   </div>
                   <div className="metric-item">
                     <div className="metric-number">Co-op</div>
-                    <div className="metric-label">Upcoming</div>
-                    <div className="metric-description">Part of integrated curriculum</div>
+                    <div className="metric-label">Current Term</div>
+                    <div className="metric-description">Work term as part of integrated curriculum</div>
                   </div>
                   <div className="metric-item">
                     <div className="metric-number">WLU</div>
@@ -131,11 +131,11 @@ const Education = () => {
                 <div className="key-achievements">
                   <h5>Key Achievements:</h5>
                   <ul>
-                    <li>🎓 Currently pursuing Masters of Applied Computing (1st Term) at Wilfrid Laurier University</li>
-                    <li>📊 Actively studying Practical Algorithm Design, Data Analysis, and Android Application Programming</li>
+                    <li>🎓 Currently pursuing Masters of Applied Computing (4th Term) at Wilfrid Laurier University</li>
+                    <li>💼 Currently on the co-op work term, applying graduate coursework to production engineering work</li>
+                    <li>📊 Completed Practical Algorithm Design, Data Analysis, and Android Application Programming</li>
                     <li>🌍 Successfully transitioned to graduate studies in Canadian education system</li>
                     <li>🚀 Building on strong undergraduate foundation in computer engineering for advanced studies</li>
-                    <li>💼 Preparing for upcoming co-op placements as part of integrated curriculum</li>
                     <li>🤝 Balancing rigorous graduate coursework with professional development opportunities</li>
                   </ul>
                 </div>
@@ -149,7 +149,7 @@ const Education = () => {
               <div className="tech-item">🧮 Algorithm Design</div>
               <div className="tech-item">📊 Data Analysis</div>
               <div className="tech-item">📱 Android Programming</div>
-              <div className="tech-item">💼 Co-op Integration</div>
+              <div className="tech-item">💼 Co-op Work Term</div>
               <div className="tech-item">🎓 Graduate Studies</div>
             </div>
             <div className="additional-tools">

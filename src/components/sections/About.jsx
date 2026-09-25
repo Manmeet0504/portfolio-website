@@ -8,12 +8,13 @@ const About = () => {
         <div className="about-text">
           <p>
             I’m a passionate <span className="highlight">Full Stack Developer</span> and
-            <span className="highlight purple"> Data Scientist</span> with a strong foundation in computer engineering
-            and hands-on experience building scalable, data-driven applications.
+            <span className="highlight purple"> Cloud Engineer</span> with a strong foundation in computer engineering
+            and hands-on experience building scalable, production-ready applications.
           </p>
           <p>
-            Currently pursuing my <span className="highlight">Masters in Applied Computing</span> at Wilfrid Laurier University,
-            I bring together academic insight and industry experience from
+            Currently pursuing my <span className="highlight">Masters in Applied Computing</span> at Wilfrid Laurier University
+            while working as a <span className="highlight">Software Engineer</span> at
+            <span className="highlight purple"> Sun Life</span>, building on industry experience from
             <span className="highlight"> Exotel</span> and <span className="highlight purple">Samsung R&D</span>.
           </p>
           <p>
@@ -23,19 +24,22 @@ const About = () => {
             of how scalable systems operate end-to-end.
           </p>
           <p>
-            I’m also exploring <span className="highlight purple">context and prompt engineering</span> to blend modern AI-driven workflows
-            with practical software development, parts of this website itself are built using that approach.
+            My main interest sits in <span className="highlight">AWS and cloud services</span> and in
+            <span className="highlight purple"> GenAI</span>, where I build <span className="highlight purple">agents</span> and
+            end-to-end solutions rather than just isolated features. Day to day that means serverless APIs on Lambda,
+            agentic assistants grounded in enterprise knowledge sources, and
+            <span className="highlight purple"> context and prompt engineering</span>. Parts of this website itself are built using that approach.
           </p>
         </div>
 
         <div className="about-cards">
           <div className="info-card">
             <h3>Current Focus</h3>
-            <p>Masters in Applied Computing at Wilfrid Laurier University</p>
+            <p>Serverless & GenAI engineering on AWS, alongside my Masters in Applied Computing at Wilfrid Laurier University</p>
           </div>
           <div className="info-card">
             <h3>Experience</h3>
-            <p>1+ years in Full Stack Development</p>
+            <p>2+ years across full stack development and cloud engineering</p>
           </div>
         </div>
 

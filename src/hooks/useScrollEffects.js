@@ -6,7 +6,7 @@ export const useScrollEffects = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'experience', 'education', 'projects', 'skills', 'extracurricular', 'contact'];
+      const sections = ['home', 'about', 'experience', 'education', 'certifications', 'projects', 'skills', 'contact'];
 
       // Show/hide scroll to top button
       setShowScrollTop(window.scrollY > 300);

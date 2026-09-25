@@ -20,10 +20,10 @@ const Hero = () => {
       <div className="hero-content">
         <h1 className="hero-title">Manmeet Singh</h1>
         <div className="hero-subtitle">
-          <span className="typing-text">Full Stack Developer & Emerging Data Scientist</span>
+          <span className="typing-text">Full Stack Developer & Cloud Engineer</span>
         </div>
         <p className="hero-description">
-          Passionate about creating innovative solutions that bridge the gap between technology and real-world problems.
+          Building on AWS and cloud services, with a strong interest in GenAI, agents, and end-to-end solutions that bridge the gap between technology and real-world problems.
         </p>
 
         <div className="contact-info">
